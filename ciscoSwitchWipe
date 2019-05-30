@@ -1,0 +1,71 @@
+property runCount : 0
+tell application "Terminal"
+	activate
+	set number of rows of window 1 to 50
+	set number of columns of window 1 to 50
+	set custom title of window 1 to "Cisco Switch Wiper"
+	delay 5
+	if runCount < 1 then
+		do script with command "screen /dev/tty.usbserial 9600"
+	else
+		do script with command "screen -r"
+	end if
+end tell
+
+tell application "System Events"
+	delay 3
+	keystroke return
+	delay 6
+	keystroke "<<SWITCH USERNAME>>"
+	delay 1
+	keystroke return
+	delay 3
+	keystroke "<<SWITCH PASSWORD>>"
+	delay 1
+	keystroke return
+	delay 1
+	keystroke "en"
+	delay 1
+	keystroke return
+	delay 5
+	keystroke "<<ENABLE PASSWORD>>"
+	delay 1
+	keystroke return
+	delay 1
+	keystroke "write erase"
+	delay 1
+	keystroke return
+	delay 1
+	keystroke return
+	delay 3
+	keystroke return
+	delay 1
+	keystroke "reload"
+	delay 1
+	keystroke return
+	delay 1
+	keystroke return
+	delay 120
+	keystroke return
+	delay 5
+	keystroke return
+	delay 1
+	keystroke "en"
+	delay 1
+	keystroke return
+	delay 1
+	keystroke "delete flash:vlan.dat"
+	delay 1
+	keystroke return
+	delay 1
+	keystroke return
+	delay 1
+	keystroke return
+	delay 1
+	keystroke "reload"
+	delay 1
+	keystroke return
+	delay 1
+	keystroke return
+	set runCount to runCount + 1
+end tell
