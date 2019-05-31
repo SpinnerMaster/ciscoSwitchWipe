@@ -1,4 +1,4 @@
-# ciscoSwitchWipe
+# Cisco Switch Wipe
 Small AppleScript utility to wipe Cisco switches. Built with disdain.
 
 To run:
