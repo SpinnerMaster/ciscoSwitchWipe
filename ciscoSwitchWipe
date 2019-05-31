@@ -27,7 +27,7 @@ tell application "System Events"
 	keystroke "en"
 	delay 1
 	keystroke return
-	delay 5
+	delay 1
 	keystroke "<<ENABLE PASSWORD>>"
 	delay 1
 	keystroke return
@@ -45,7 +45,7 @@ tell application "System Events"
 	keystroke return
 	delay 1
 	keystroke return
-	delay 120
+	delay 45
 	keystroke return
 	delay 1
 	keystroke "no"
@@ -61,12 +61,6 @@ tell application "System Events"
 	keystroke "delete flash:vlan.dat"
 	delay 1
 	keystroke return
-	delay 1
-	keystroke return
-	delay 1
-	keystroke return
-	delay 1
-	keystroke "reload"
 	delay 1
 	keystroke return
 	delay 1
