@@ -47,6 +47,10 @@ tell application "System Events"
 	keystroke return
 	delay 120
 	keystroke return
+	delay 1
+	keystroke "no"
+	delay 1
+	keystroke return
 	delay 5
 	keystroke return
 	delay 1
